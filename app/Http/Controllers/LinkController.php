@@ -9,7 +9,7 @@ class LinkController extends Controller
 {
     public function index()
     {
-        return inertia('Links', [
+        return inertia('Links/Index', [
             'links' => auth()->user()->links->load('user')
         ]);
     }
